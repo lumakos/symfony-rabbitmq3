@@ -8,3 +8,6 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+/.BundlesConfigurator.php
+/.Flex.php
+/.Path.php
