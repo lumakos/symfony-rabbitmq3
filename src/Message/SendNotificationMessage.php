@@ -2,13 +2,13 @@
 
 namespace App\Message;
 
-class SendNotificationMessage
+readonly class SendNotificationMessage
 {
     public function __construct(private string $text)
     {
     }
 
-    public function getText()
+    public function getText(): string
     {
         return $this->text;
     }
