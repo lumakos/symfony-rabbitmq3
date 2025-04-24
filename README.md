@@ -1,9 +1,9 @@
 # configuration-files-for-the-symfony-project
 It's templates of the configuration files (Dockerfile, docker-compose.yaml, nginx.conf, xdebug.ini) for creating new Symfony application.
 
-### Run app in port 8088
+### Run app in port 8088 && Start Worker (Run Consumer) as background service
 ```
-docker-compose up -d
+docker-compose up -d --scale consumer=3
 ```
 
 ### Open RabbitMQ (username: guest, password: guest)
@@ -11,7 +11,7 @@ docker-compose up -d
 http://localhost:15672/#/
 ```
 
-### Start Worker (async)
+### OPTIONAL: Start Worker (async)
 ```
 docker-compose exec php php bin/console messenger:consume async
 ```
@@ -50,3 +50,9 @@ If the chef isn’t in the kitchen (you don’t run the command), food (messages
 1. `Create new Entity`
 2. `docker-compose exec php php bin/console make:migration`
 3. `docker-compose exec php php bin/console doctrine:migrations:migrate`
+
+```
+$log = new MessageLog("Hello World!");
+$this->entityManager->persist($log); // Track this object
+$this->entityManager->flush();       // Write it to the DB now
+```

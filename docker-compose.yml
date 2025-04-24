@@ -35,3 +35,13 @@ services:
     ports:
       - '5672:5672'
       - '15672:15672'
+
+  consumer:
+    build: .
+    depends_on:
+      - rabbitmq3
+      - php
+    command: php bin/console messenger:consume async --time-limit=3600 --memory-limit=128M --no-interaction
+    volumes:
+      - ./:/app
+    restart: unless-stopped
