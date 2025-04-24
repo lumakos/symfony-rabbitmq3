@@ -1,4 +1,4 @@
-# configuration-files-for-the-symfony-project
+## Symfony 7 Boilerplate framework with RabbitMQ3
 It's templates of the configuration files (Dockerfile, docker-compose.yaml, nginx.conf, xdebug.ini) for creating new Symfony application.
 
 ### Run app in port 8088 && Start Worker (Run Consumer) as background service
