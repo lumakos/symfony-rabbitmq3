@@ -20,7 +20,7 @@ docker-compose exec php php bin/console messenger:consume async
 ```
 http://127.0.0.1:8088/send-message
 ```
-And check rabbitmq.
+And check rabbitmq and "message_log" DB.
 
 ### Packages
 ```
@@ -35,7 +35,6 @@ systems, or services. It implements the Advanced Message Queuing Protocol (AMQP)
 communication and decoupling of microservices.
 ```
 
-
 ### About "messenger:consume"
 ```
 Imagine a restaurant:
@@ -46,3 +45,8 @@ Imagine a restaurant:
 
 If the chef isn’t in the kitchen (you don’t run the command), food (messages) will just sit there and get cold (unprocessed).
 ```
+
+### Entities
+1. `Create new Entity`
+2. `docker-compose exec php php bin/console make:migration`
+3. `docker-compose exec php php bin/console doctrine:migrations:migrate`

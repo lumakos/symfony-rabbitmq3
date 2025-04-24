@@ -8,7 +8,7 @@ readonly class SendNotificationMessage
     {
     }
 
-    public function getText(): string
+    public function getContent(): string
     {
         return $this->text;
     }
