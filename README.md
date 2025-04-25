@@ -1,5 +1,13 @@
 ## Symfony 7 Boilerplate framework with RabbitMQ3
 It's templates of the configuration files (Dockerfile, docker-compose.yaml, nginx.conf, xdebug.ini) for creating new Symfony application.
+Default Repository 
+
+https://github.com/Tanya-WebDev/configuration-files-for-the-symfony-project
+
+https://www.youtube.com/watch?v=tsqliJ3tFnk 
+
+### DDD
+https://github.com/Tanya-WebDev/mail-component
 
 ### Run app in port 8088 && Start Worker (Run Consumer) as background service
 ```
